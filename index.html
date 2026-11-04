@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <title>CA BUDDY | Study Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">CA <span>BUDDY</span></a>
+    <span class="nav-tagline">Your Personal Study Companion</span>
+</header>
+
+<main class="container">
+
+    <section class="welcome-section">
+        <p class="eyebrow">WELCOME TO YOUR STUDY SPACE</p>
+        <h1>Study Smart. <span>Achieve More.</span></h1>
+        <p class="subtitle">
+            Plan your day, track your progress and achieve your goals.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">YOUR LEARNING SPACE</p>
+            <h2>Choose Your Subject</h2>
+        </div>
+
+        <div class="subject-grid">
+
+            <a href="maths.html" class="subject-card">
+                <div class="subject-icon">∑</div>
+                <h3>Mathematics</h3>
+                <p>Formulas, concepts and practice materials.</p>
+                <span class="card-link">Explore Subject →</span>
+            </a>
+
+            <a href="accounts.html" class="subject-card">
+                <div class="subject-icon">₹</div>
+                <h3>Accounts</h3>
+                <p>Accounting concepts and practical learning.</p>
+                <span class="card-link">Explore Subject →</span>
+            </a>
+
+            <a href="laws.html" class="subject-card">
+                <div class="subject-icon">§</div>
+                <h3>Laws</h3>
+                <p>Legal concepts, provisions and notes.</p>
+                <span class="card-link">Explore Subject →</span>
+            </a>
+
+            <a href="economics.html" class="subject-card">
+                <div class="subject-icon">📈</div>
+                <h3>Economics</h3>
+                <p>Economic theories and study materials.</p>
+                <span class="card-link">Explore Subject →</span>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="tracker-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">YOUR DAILY ROUTINE</p>
+            <h2>Study Time Tracker</h2>
+            <p class="subtitle">Track how much time you actually study.</p>
+        </div>
+
+        <div class="panel timer-panel">
+            <p class="panel-label">TODAY'S STUDY TIME</p>
+
+            <div class="timer-display" id="timerDisplay">
+                00:00:00
+            </div>
+
+            <p class="muted-text" id="timerStatus">
+                Ready to start studying?
+            </p>
+
+            <div class="timer-buttons">
+                <button id="startBtn" class="btn btn-primary">Start</button>
+                <button id="pauseBtn" class="btn btn-secondary">Pause</button>
+                <button id="resetBtn" class="btn btn-danger">Reset</button>
+            </div>
+
+            <p class="small-note">Your study time is automatically saved.</p>
+        </div>
+
+    </section>
+
+    <section class="todo-section">
+
+        <div class="section-heading">
+            <p class="eyebrow">PLAN YOUR DAY</p>
+            <h2>Today's Study Targets 📝</h2>
+            <p class="subtitle">
+                Write down everything you want to complete today.
+            </p>
+        </div>
+
+        <div class="panel todo-panel">
+
+            <div class="todo-date">
+                <span id="todayDate"></span>
+            </div>
+
+            <form id="taskForm" class="task-form">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you want to study today?"
+                    maxlength="150"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <div class="todo-progress">
+
+                <div class="progress-label">
+                    <span>Today's Progress</span>
+                    <strong id="taskProgressText">0 / 0 Completed</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="taskProgressFill" class="progress-fill"></div>
+                </div>
+
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks added yet. Start planning your day!
+            </p>
+
+            <div class="todo-footer">
+                <span id="remainingTasks">0 tasks remaining</span>
+                <button id="clearCompletedBtn" class="clear-btn" type="button">
+                    Clear Completed
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="motivation-section">
+        <h2>Consistency is the key to success.</h2>
+        <p>One task at a time. One day at a time. Keep moving forward!</p>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 CA BUDDY. All Rights Reserved.</p>
+    <p>Designed for focused learning and better preparation.</p>
+</footer>
+
+</body>
+</html>

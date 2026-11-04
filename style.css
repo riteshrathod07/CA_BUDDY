@@ -1,0 +1,788 @@
+/* ==========================================
+   CA BUDDY - COMPLETE RESPONSIVE STYLESHEET
+========================================== */
+
+/* GLOBAL VARIABLES */
+
+:root {
+    --background: #101827;
+    --surface: #192538;
+    --surface-light: #223249;
+    --primary: #668CFF;
+    --primary-hover: #4D72E8;
+    --text: #F4F7FC;
+    --muted: #9BAAC0;
+    --border: #304158;
+    --success: #38C994;
+    --danger: #E66B75;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: #141F30;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-tagline {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 86%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    padding: 65px 0 45px;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome-section h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.welcome-section h1 span {
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* SECTION HEADINGS */
+
+.section {
+    padding: 25px 0 45px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+/* SUBJECT GRID */
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* SUBJECT CARDS */
+
+.subject-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 225px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    transition: 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    background: var(--surface-light);
+}
+
+.subject-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #2A3B58;
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #91B1FF;
+}
+
+.subject-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.subject-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.card-link {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* STUDY TRACKER SECTION */
+
+.tracker-section {
+    padding: 30px 0 55px;
+}
+
+/* COMMON PANELS */
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.panel-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+/* TIMER */
+
+.timer-panel {
+    max-width: 100%;
+}
+
+.timer-display {
+    font-size: clamp(35px, 6vw, 52px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 18px 0 5px;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.muted-text {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.timer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: var(--surface-light);
+    color: white;
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: #30445F;
+}
+
+.btn-danger {
+    background: #512B38;
+    color: #FF9CA5;
+}
+
+.btn-danger:hover {
+    background: #713441;
+}
+
+.small-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 20px;
+}
+
+/* ==========================================
+   DAILY STUDY TARGET / TO-DO LIST
+========================================== */
+
+.todo-section {
+    padding: 25px 0 55px;
+}
+
+.todo-panel {
+    padding: 28px;
+}
+
+/* DATE */
+
+.todo-date {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* TASK INPUT FORM */
+
+.task-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.task-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+    border-radius: 9px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.task-form input:focus {
+    border-color: var(--primary);
+}
+
+.task-form input::placeholder {
+    color: #7F8DA3;
+}
+
+/* PROGRESS SECTION */
+
+.todo-progress {
+    margin-bottom: 22px;
+}
+
+.todo-progress .progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.todo-progress .progress-label strong {
+    color: var(--success);
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #304158;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--success);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* TASK LIST */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* INDIVIDUAL TASK */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.task-item:hover {
+    border-color: var(--primary);
+}
+
+/* TASK CHECKBOX */
+
+.task-checkbox {
+    width: 19px;
+    height: 19px;
+    accent-color: var(--success);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* TASK TEXT */
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+/* COMPLETED TASK */
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+/* DELETE BUTTON */
+
+.delete-task {
+    border: none;
+    background: #512B38;
+    color: #FF9CA5;
+    border-radius: 7px;
+    padding: 7px 11px;
+    cursor: pointer;
+    font-size: 12px;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.delete-task:hover {
+    background: #713441;
+}
+
+/* EMPTY TASK MESSAGE */
+
+.empty-message {
+    color: var(--muted);
+    padding: 25px;
+    text-align: center;
+    background: var(--surface);
+    border-radius: 12px;
+}
+
+/* TODO FOOTER */
+
+.todo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* CLEAR COMPLETED BUTTON */
+
+.clear-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.clear-btn:hover {
+    color: white;
+}
+
+.clear-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   SUBJECT PAGES
+========================================== */
+
+/* BACK TO DASHBOARD */
+
+.back-link {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 13px;
+    margin: 35px 0 20px;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+/* SUBJECT HEADER */
+
+.subject-header {
+    padding: 25px 0 35px;
+}
+
+.subject-header h1 {
+    font-size: clamp(30px, 5vw, 42px);
+    margin-bottom: 10px;
+}
+
+.subject-header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* CHAPTER SECTION */
+
+.chapter-section {
+    padding-bottom: 60px;
+}
+
+.chapter-list {
+    display: grid;
+    gap: 15px;
+}
+
+/* CHAPTER CARD */
+
+.chapter-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: 0.2s;
+}
+
+.chapter-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* CHAPTER INFORMATION */
+
+.chapter-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chapter-number {
+    min-width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #293D5B;
+    color: #91B1FF;
+    font-weight: 700;
+}
+
+.chapter-info h3 {
+    font-size: 16px;
+}
+
+.chapter-info p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* PDF BUTTON */
+
+.pdf-button {
+    display: inline-block;
+    background: #293D5B;
+    color: #9DB8FF;
+    border: 1px solid #425A80;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.pdf-button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==========================================
+   MOTIVATION SECTION
+========================================== */
+
+.motivation-section {
+    text-align: center;
+    background: linear-gradient(120deg, #202E4C, #29385B);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px 20px;
+    margin: 10px 0 60px;
+}
+
+.motivation-section h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.motivation-section p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 25px 15px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.footer p + p {
+    margin-top: 5px;
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 550px) {
+
+    /* Navbar */
+
+    .navbar {
+        padding: 17px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-tagline {
+        font-size: 10px;
+    }
+
+    /* Main container */
+
+    .container {
+        width: 90%;
+    }
+
+    /* Welcome */
+
+    .welcome-section {
+        padding-top: 45px;
+    }
+
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+
+    /* Subject cards */
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .subject-card {
+        min-height: 190px;
+        padding: 20px;
+    }
+
+    /* Tracker */
+
+    .panel {
+        padding: 20px;
+    }
+
+    .timer-display {
+        font-size: 38px;
+    }
+
+    .timer-buttons {
+        gap: 8px;
+    }
+
+    .timer-buttons .btn {
+        padding: 10px 14px;
+    }
+
+    /* To-do list */
+
+    .todo-panel {
+        padding: 18px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form input {
+        width: 100%;
+    }
+
+    .task-form button {
+        width: 100%;
+    }
+
+    .task-item {
+        padding: 12px;
+    }
+
+    .task-text {
+        font-size: 13px;
+    }
+
+    .todo-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Subject chapters */
+
+    .chapter-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px;
+    }
+
+    .chapter-info h3 {
+        font-size: 14px;
+    }
+
+    .pdf-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Motivation */
+
+    .motivation-section {
+        padding: 28px 15px;
+    }
+
+    .motivation-section h2 {
+        font-size: 18px;
+    }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY AND INTERACTION
+========================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+[hidden] {
+    display: none !important;
+}
